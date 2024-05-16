@@ -21,7 +21,7 @@
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.beyram_taglietti.expoapp"
+      "package": "com.beyramtaglietti.expoapp"
     },
     "web": {
       "bundler": "metro",
@@ -32,8 +32,7 @@
       "expo-router"
     ],
     "experiments": {
-      "typedRoutes": true,
-      "tsconfigPaths": true
+      "typedRoutes": true
     }
   }
 }

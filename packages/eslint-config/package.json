@@ -1,6 +1,7 @@
 {
   "name": "@expo-hono/eslint-config",
   "version": "1.0.0",
+  "private": true,
   "files": [
     "expo.js"
   ],

@@ -9,15 +9,9 @@ export const AmazingButton = () => {
   }, [count]);
 
   return (
-    <TouchableOpacity className="bg-red-500">
-      <Text className="text-yellow-500">My amazing button</Text>
-      <Text
-        style={{
-          fontSize: 20,
-        }}
-      >
-        I Am Not Native Winded
-      </Text>
+    <TouchableOpacity className="bg-red-500 p-4 rounded-lg">
+      <Text className="text-white">My amazing button</Text>
+      <Text className="text-white">I Am Not Native Winded</Text>
     </TouchableOpacity>
   );
 };
