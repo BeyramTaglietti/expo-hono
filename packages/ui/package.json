@@ -1,0 +1,21 @@
+{
+  "name": "@expo-hono/ui",
+  "version": "1.0.0",
+  "private": true,
+  "main": "./components/index.ts",
+  "scripts": {
+    "lint": "echo \"Error: no lint specified\""
+  },
+  "dependencies": {
+    "expo": "~51.0.7",
+    "nativewind": "^2.0.11",
+    "react": "18.2.0",
+    "react-native": "0.74.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.46",
+    "@types/react-native": "^0.73.0",
+    "tailwindcss": "3.3.2",
+    "typescript": "^5.3.3"
+  }
+}
