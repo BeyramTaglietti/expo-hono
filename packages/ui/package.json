@@ -2,19 +2,16 @@
   "name": "@expo-hono/ui",
   "version": "1.0.0",
   "private": true,
-  "main": "./components/index.ts",
   "scripts": {
     "lint": "eslint ."
   },
   "devDependencies": {
     "@expo-hono/eslint-config": "*",
     "@types/react": "^18.2.46",
-    "tailwindcss": "3.3.2",
     "typescript": "^5.3.3"
   },
   "peerDependencies": {
     "react": "18.x",
-    "react-native": "0.74.x",
-    "nativewind": "2.x"
+    "react-native": "0.74.x"
   }
 }

@@ -5,5 +5,10 @@ module.exports = {
     "prettier/prettier": "error",
     "import/no-unresolved": "off",
   },
-  ignorePatterns: ["node_modules/", "metro.config.js", "babel.config.js"],
+  ignorePatterns: [
+    "node_modules/",
+    "metro.config.js",
+    "babel.config.js",
+    "expo-env.d.ts",
+  ],
 };
