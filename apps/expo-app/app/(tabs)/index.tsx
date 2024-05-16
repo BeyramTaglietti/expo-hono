@@ -4,9 +4,19 @@ import { HelloWave } from "@/components/HelloWave";
 import ParallaxScrollView from "@/components/ParallaxScrollView";
 import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
+import { TripModel } from "@expo-hono/models";
 import { AmazingButton } from "@expo-hono/ui";
+import { useState } from "react";
 
 export default function HomeScreen() {
+  const [currentUser, setCurrentUser] = useState<TripModel>({
+    id: "1",
+    title: "My trip",
+    description: "My trip description",
+    startDate: new Date(),
+    endDate: new Date(),
+  });
+
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: "#A1CEDC", dark: "#1D3D47" }}
@@ -19,6 +29,7 @@ export default function HomeScreen() {
     >
       <ThemedView style={styles.titleContainer}>
         <ThemedText type="title">Welcome!</ThemedText>
+        <ThemedText>{JSON.stringify(currentUser, null, 2)}</ThemedText>
         <HelloWave />
       </ThemedView>
       <AmazingButton />
@@ -59,7 +70,7 @@ export default function HomeScreen() {
 
 const styles = StyleSheet.create({
   titleContainer: {
-    flexDirection: "row",
+    flexDirection: "column",
     alignItems: "center",
     gap: 8,
   },
