@@ -6,9 +6,19 @@ import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
 
 import { AmazingButton } from "@expo-hono/ui/components";
+import { useEffect, useState } from "react";
 // import  from '@expo-hono/ui';
 
 export default function HomeScreen() {
+  const [data, setData] = useState(null);
+  useEffect(() => {
+    (async () => {
+      const res = await fetch("http://localhost:3000");
+      const data = await res.json();
+      setData(data);
+    })();
+  }, []);
+
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: "#A1CEDC", dark: "#1D3D47" }}
@@ -19,6 +29,7 @@ export default function HomeScreen() {
         />
       }
     >
+      <Text>{JSON.stringify(data, null, 2)}</Text>
       <ThemedView style={styles.titleContainer}>
         <ThemedText type="title">Welcome!</ThemedText>
         <HelloWave />
